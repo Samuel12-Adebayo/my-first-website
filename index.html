@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My First Website</title>
+</head>
+
+<body style="text-align:center;font-family:Arial;padding:40px;">
+
+<h1>Random Fun Facts</h1>
+
+<p>Click the button to see a fun fact!</p>
+
+<button onclick="showFact()">Show Fact</button>
+
+<p id="fact"></p>
+
+<script>
+
+const facts = [
+"Honey never spoils",
+"Octopuses have three hearts",
+"Bananas are berries",
+"The brain is 73% water",
+"Sharks existed before trees"
+];
+
+function showFact(){
+let random = Math.floor(Math.random()*facts.length);
+document.getElementById("fact").innerText = facts[random];
+}
+
+</script>
+
+</body>
+</html>
